@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Com3ço</h1>
+        <p>"Wxgr frphçd qr Péalfr"</p>
+        <input type="text" id="resposta" placeholder="Digite sua resposta">
+        <button onclick="verificarResposta()">Verificar</button>
+        <p id="resultado"></p>
+
+    </div>
+    <div class="hint"></div>
+    <button onclick="Dica()">Dica</button>
+    <p id="hidden"> Conquistador de Gália </p>
+
+
+    <script>
+        function Dica() {
+    let elemento = document.getElementById("hidden");
+    if (elemento.style.display === "none" || elemento.style.display === "") {
+        elemento.style.display = "block";
+    } else {
+        elemento.style.display = "none";
+    }
+}
+
+
+
+        function verificarResposta() {
+            let resposta = document.getElementById("resposta").value.toLowerCase();
+            if (resposta === "méxico") {
+                window.location.href = "enigma2.html";
+            } else {
+                document.getElementById("resultado").innerText = "Resposta incorreta. Tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>

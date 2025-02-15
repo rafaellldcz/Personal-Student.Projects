@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voamos</h1>
+        <p>"AFAZSS"</p>
+        <input type="1text" id="resposta" placeholder="Digite sua resposta">
+        <button onclick="verificarResposta()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+
+    <div>
+        <div class="hint"></div>
+        <button onclick="Dica()">Dica</button>
+    <p id="hidden">A chave para a solução pode estar mais perto do que imagina...</p>
+
+    <div>
+        <div class="hint"></div>
+        <button onclick="Dica2()">Dica 2</button>
+    <p id="hidden2">1465</p>
+
+
+    <script>
+          function Dica() {
+            let elemento = document.getElementById("hidden");
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        } 
+
+        function Dica2() {
+            let elemento = document.getElementById("hidden2");
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+
+        function verificarResposta() {
+            let resposta = document.getElementById("resposta").value.toLowerCase();
+            if (resposta === "frança") {
+                window.location.href = "enigma5.html";
+            } else {
+                document.getElementById("resultado").innerText = "Resposta incorreta. Tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
