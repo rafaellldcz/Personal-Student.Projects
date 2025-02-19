@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo"></h1>
+        <p id="pergunta"></p>
+        <input type="text" id="resposta" placeholder="Digite sua resposta">
+        <button onclick="verificarResposta()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+
+    <div class="hint">
+        <button onclick="Dica()">Dica</button>
+        <p id="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
